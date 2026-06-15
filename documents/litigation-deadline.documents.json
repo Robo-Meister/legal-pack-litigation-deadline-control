@@ -1,0 +1,79 @@
+{
+  "documentSetKey": "litigation_deadline_control_documents_v1",
+  "slug": "legal-pack-litigation-deadline-control",
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "documentTypes": [
+    {
+      "code": "court_letter",
+      "label": "Court letter",
+      "requiredFor": [
+        "court_document_registration",
+        "court_communication_log"
+      ]
+    },
+    {
+      "code": "claim",
+      "label": "Claim",
+      "requiredFor": [
+        "court_document_registration"
+      ]
+    },
+    {
+      "code": "response",
+      "label": "Response",
+      "requiredFor": [
+        "court_document_registration",
+        "filing_service_review"
+      ]
+    },
+    {
+      "code": "court_order",
+      "label": "Court order",
+      "requiredFor": [
+        "court_document_registration",
+        "deadline_creation"
+      ]
+    },
+    {
+      "code": "proof_of_service",
+      "label": "Proof of service",
+      "requiredFor": [
+        "filing_service_review"
+      ]
+    },
+    {
+      "code": "evidence_attachment",
+      "label": "Evidence attachment",
+      "requiredFor": [
+        "court_document_registration",
+        "matter_closing"
+      ]
+    },
+    {
+      "code": "deadline_note",
+      "label": "Deadline note",
+      "requiredFor": [
+        "deadline_creation",
+        "deadline_followup",
+        "matter_closing"
+      ]
+    },
+    {
+      "code": "review_summary",
+      "label": "Review summary",
+      "requiredFor": [
+        "filing_service_review",
+        "matter_closing"
+      ]
+    }
+  ],
+  "custodyPolicy": {
+    "sourceMatterPackage": "legal-pack-litigation-deadline-control",
+    "inheritsBaseCategoriesFrom": "legal-office-app",
+    "proofOfServiceRequiredBeforeServiceComplete": true,
+    "deadlineNotesRequireResponsibleOwner": true
+  }
+}

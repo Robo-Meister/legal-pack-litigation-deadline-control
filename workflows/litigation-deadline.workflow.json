@@ -1,0 +1,115 @@
+{
+  "workflowKey": "legal_pack_litigation_deadline_control_v1",
+  "slug": "legal-pack-litigation-deadline-control",
+  "name": "Court & Litigation Deadline Pack Workflow",
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "jurisdictions": [
+    "generic"
+  ],
+  "inheritsFrom": "legal-office-app",
+  "workflows": [
+    {
+      "code": "court_matter_intake",
+      "title": "Court matter intake",
+      "trigger": "new_court_or_litigation_matter",
+      "requiredInputs": [
+        "court_reference_required",
+        "party_data_required",
+        "initial_timeline_summary"
+      ],
+      "output": "court_matter_workspace_draft"
+    },
+    {
+      "code": "court_document_registration",
+      "title": "Court document registration",
+      "trigger": "court_document_received_or_created",
+      "requiredDocuments": [
+        "court_letter",
+        "claim",
+        "response",
+        "court_order",
+        "evidence_attachment"
+      ],
+      "checklists": [
+        "deadline_required_for_court_document"
+      ],
+      "output": "court_document_log_entry"
+    },
+    {
+      "code": "deadline_creation",
+      "title": "Deadline creation",
+      "trigger": "court_document_registered_or_deadline_identified",
+      "requiredInputs": [
+        "deadline_required_for_court_document",
+        "deadline_note"
+      ],
+      "output": "deadline_control_record"
+    },
+    {
+      "code": "responsible_owner_assignment",
+      "title": "Responsible owner assignment",
+      "trigger": "deadline_control_record_created",
+      "requiredInputs": [
+        "owner_required_for_deadline"
+      ],
+      "output": "owned_deadline_control_record"
+    },
+    {
+      "code": "court_communication_log",
+      "title": "Court communication history",
+      "trigger": "court_or_party_communication_received",
+      "requiredInputs": [
+        "communication_date",
+        "communication_channel",
+        "communication_summary"
+      ],
+      "output": "court_communication_history_entry"
+    },
+    {
+      "code": "filing_service_review",
+      "title": "Filing/service review gate",
+      "trigger": "filing_or_service_packet_ready",
+      "requiredDocuments": [
+        "proof_of_service",
+        "review_summary"
+      ],
+      "rules": [
+        "human_review_before_filing",
+        "proof_of_service_required"
+      ],
+      "output": "filing_service_review_decision"
+    },
+    {
+      "code": "deadline_followup",
+      "title": "Deadline followup",
+      "trigger": "deadline_due_or_followup_required",
+      "requiredInputs": [
+        "owner_required_for_deadline",
+        "timeline_update_required"
+      ],
+      "output": "deadline_followup_record"
+    },
+    {
+      "code": "matter_closing",
+      "title": "Matter closing",
+      "trigger": "court_matter_ready_to_close",
+      "requiredDocuments": [
+        "review_summary",
+        "deadline_note"
+      ],
+      "checklists": [
+        "timeline_update_required"
+      ],
+      "output": "litigation_matter_closing_packet"
+    }
+  ],
+  "reviewGatePolicy": {
+    "filingRequiresHumanReview": true,
+    "serviceRequiresProofReview": true,
+    "deadlineOwnerRequired": true,
+    "deadlineCalculationRequiresHumanValidation": true
+  }
+}

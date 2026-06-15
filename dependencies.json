@@ -1,0 +1,54 @@
+{
+  "slug": "legal-pack-litigation-deadline-control",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "package": "legal-office-app",
+      "purpose": "Base Legal Office matter structure, review gates, document categories, and controlled AI boundary policy."
+    },
+    {
+      "module": "documents",
+      "purpose": "Court letters, claims, responses, court orders, proof of service, evidence attachments, deadline notes, and review summaries."
+    },
+    {
+      "module": "bpm",
+      "purpose": "Controlled workflow orchestration for court intake, document registration, owner assignment, filing/service review, followup, and closing."
+    },
+    {
+      "module": "calendar",
+      "purpose": "Deadline control, responsible owner assignment, deadline followup, and timeline update reminders."
+    },
+    {
+      "module": "crm",
+      "purpose": "Party, court, counterparty, representative, and service-recipient contact context."
+    }
+  ],
+  "optionalDependencies": [
+    {
+      "module": "communication",
+      "purpose": "Court communication history and controlled party/court communication logs."
+    },
+    {
+      "module": "ai-module",
+      "purpose": "AI-assisted timeline summaries and filing/service checklist suggestions for human review."
+    },
+    {
+      "module": "risk",
+      "purpose": "Risk tags for missing references, unassigned deadlines, missing proof of service, and overdue followup."
+    }
+  ],
+  "inherits": {
+    "package": "legal-office-app",
+    "reviewGatePolicy": true,
+    "aiBoundaryPolicy": true
+  },
+  "packageDependencies": [
+    "legal-office-app"
+  ],
+  "moduleRequirements": [
+    "documents",
+    "bpm",
+    "calendar",
+    "crm"
+  ]
+}

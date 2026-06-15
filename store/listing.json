@@ -1,0 +1,59 @@
+{
+  "slug": "legal-pack-litigation-deadline-control",
+  "name": "Court & Litigation Deadline Pack",
+  "type": "pack",
+  "solutionTags": [
+    "solution:legal-office"
+  ],
+  "tags": [
+    "legal",
+    "legal-office",
+    "litigation",
+    "court",
+    "deadline-control",
+    "matter-workflow",
+    "documents",
+    "calendar",
+    "review-gates",
+    "regulation-aware"
+  ],
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "jurisdictions": [
+    "generic"
+  ],
+  "shortDescription": "Court and litigation deadline control pack for court communication history, document logs, owner assignment, and filing/service review gates.",
+  "longDescription": "Court & Litigation Deadline Pack extends Legal Office App with starter workflows for court matter intake, court document registration, deadline control, responsible owner assignment, court communication history, filing/service review gates, deadline followup, and matter closing. Deadline records require human validation and assigned owners before use.",
+  "includedControls": [
+    "court_matter_intake",
+    "court_document_registration",
+    "deadline_creation",
+    "responsible_owner_assignment",
+    "court_communication_log",
+    "filing_service_review",
+    "deadline_followup",
+    "matter_closing",
+    "court_reference_required",
+    "party_data_required",
+    "deadline_required_for_court_document",
+    "owner_required_for_deadline",
+    "human_review_before_filing",
+    "proof_of_service_required",
+    "timeline_update_required"
+  ],
+  "requires": [
+    "legal-office-app",
+    "documents",
+    "bpm",
+    "calendar",
+    "crm"
+  ],
+  "optionalDependencies": [
+    "communication",
+    "ai-module",
+    "risk"
+  ],
+  "maturity": "starter"
+}

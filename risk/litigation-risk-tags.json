@@ -1,0 +1,57 @@
+{
+  "riskTagSetKey": "litigation_deadline_control_risk_tags_v1",
+  "slug": "legal-pack-litigation-deadline-control",
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "tags": [
+    {
+      "code": "missing_court_reference",
+      "label": "Missing court reference",
+      "severity": "medium",
+      "triggerRule": "court_reference_required_not_complete"
+    },
+    {
+      "code": "party_data_gap",
+      "label": "Party data gap",
+      "severity": "medium",
+      "triggerRule": "party_data_required_not_complete"
+    },
+    {
+      "code": "deadline_missing_for_document",
+      "label": "Deadline missing for court document",
+      "severity": "high",
+      "triggerRule": "deadline_required_for_court_document_not_complete"
+    },
+    {
+      "code": "deadline_owner_missing",
+      "label": "Deadline owner missing",
+      "severity": "high",
+      "triggerRule": "owner_required_for_deadline_not_complete"
+    },
+    {
+      "code": "filing_review_missing",
+      "label": "Filing/service review gate missing",
+      "severity": "high",
+      "triggerRule": "human_review_before_filing_not_complete"
+    },
+    {
+      "code": "proof_of_service_missing",
+      "label": "Proof of service missing",
+      "severity": "high",
+      "triggerRule": "proof_of_service_required_not_complete"
+    },
+    {
+      "code": "timeline_update_missing",
+      "label": "Timeline update missing",
+      "severity": "medium",
+      "triggerRule": "timeline_update_required_not_complete"
+    }
+  ],
+  "escalationPolicy": {
+    "highSeverityRequiresReviewGate": true,
+    "reviewGate": "filing_service_review",
+    "ownerRole": "responsible_attorney_or_deadline_owner"
+  }
+}

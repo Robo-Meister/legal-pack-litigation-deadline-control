@@ -1,0 +1,77 @@
+{
+  "channel": "apps",
+  "id": "legal-pack-litigation-deadline-control",
+  "key": "legal-pack-litigation-deadline-control",
+  "name": "legal-pack-litigation-deadline-control",
+  "title": "Court & Litigation Deadline Pack",
+  "version": "0.1.0",
+  "type": "module",
+  "entry": "manifest.json",
+  "description": "Starter Legal Office matter pack for litigation deadline control, court matter timelines, court communication history, document logs, responsible owner assignment, and filing/service review gates.",
+  "tags": [
+    "legal",
+    "legal-office",
+    "litigation",
+    "court",
+    "deadline-control",
+    "matter-workflow",
+    "documents",
+    "calendar",
+    "review-gates",
+    "regulation-aware"
+  ],
+  "solutionTags": [
+    "solution:legal-office"
+  ],
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "jurisdictions": [
+    "generic"
+  ],
+  "dependencies": [
+    "legal-office-app"
+  ],
+  "optionalDependencies": [
+    "communication",
+    "ai-module",
+    "risk"
+  ],
+  "files": [
+    "meta.json",
+    "manifest.json",
+    "dependencies.json",
+    "workflows/litigation-deadline.workflow.json",
+    "documents/litigation-deadline.documents.json",
+    "checklists/litigation-deadline.checklist.json",
+    "risk/litigation-risk-tags.json",
+    "ai/ai-boundaries.json",
+    "store/listing.json",
+    "README.md"
+  ],
+  "maturity": "starter",
+  "modules": [
+    "documents",
+    "bpm",
+    "calendar",
+    "crm"
+  ],
+  "modules_required": [
+    "documents",
+    "bpm",
+    "calendar",
+    "crm"
+  ],
+  "prerequisites": {
+    "dependencies": [
+      "legal-office-app"
+    ],
+    "modules": [
+      "documents",
+      "bpm",
+      "calendar",
+      "crm"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "aiBoundaryKey": "litigation_deadline_control_ai_boundaries_v1",
+  "slug": "legal-pack-litigation-deadline-control",
+  "inheritsFrom": "legal-office-app",
+  "mode": "controlled_assistive",
+  "allowedUses": [
+    "AI may summarize court communication history for human review",
+    "AI may draft timeline summaries from registered court documents",
+    "AI may suggest missing deadline-control fields",
+    "AI may suggest filing/service checklist gaps",
+    "AI may summarize deadline followup notes"
+  ],
+  "blockedUses": [
+    "calculate_court_deadline_without_human_validation",
+    "complete_filing_service_review_gate",
+    "file_or_serve_documents_autonomously",
+    "mark_proof_of_service_complete_without_human_review",
+    "provide_legal_advice"
+  ],
+  "requiredControls": [
+    "human review before filing",
+    "human validation of deadline control records",
+    "responsible owner assigned for each deadline",
+    "proof of service reviewed before service completion"
+  ],
+  "auditEvidence": [
+    "ai_suggestion_timestamp",
+    "human_reviewer_id",
+    "deadline_owner_id",
+    "filing_service_review_gate_status"
+  ]
+}

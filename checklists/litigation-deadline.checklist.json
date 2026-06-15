@@ -1,0 +1,52 @@
+{
+  "checklistKey": "litigation_deadline_control_checklist_v1",
+  "slug": "legal-pack-litigation-deadline-control",
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "items": [
+    {
+      "id": "court_reference_required",
+      "title": "Court reference captured",
+      "required": true,
+      "workflow": "court_matter_intake"
+    },
+    {
+      "id": "party_data_required",
+      "title": "Party data captured",
+      "required": true,
+      "workflow": "court_matter_intake"
+    },
+    {
+      "id": "deadline_required_for_court_document",
+      "title": "Deadline review completed for court document",
+      "required": true,
+      "workflow": "court_document_registration"
+    },
+    {
+      "id": "owner_required_for_deadline",
+      "title": "Responsible owner assigned to deadline",
+      "required": true,
+      "workflow": "responsible_owner_assignment"
+    },
+    {
+      "id": "human_review_before_filing",
+      "title": "Human review completed before filing or service",
+      "required": true,
+      "workflow": "filing_service_review"
+    },
+    {
+      "id": "proof_of_service_required",
+      "title": "Proof of service recorded before service completion",
+      "required": true,
+      "workflow": "filing_service_review"
+    },
+    {
+      "id": "timeline_update_required",
+      "title": "Matter timeline updated after deadline or court communication event",
+      "required": true,
+      "workflow": "deadline_followup"
+    }
+  ]
+}

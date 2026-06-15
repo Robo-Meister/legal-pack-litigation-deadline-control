@@ -1,0 +1,84 @@
+{
+  "packageName": "legal-pack-litigation-deadline-control",
+  "displayName": "Court & Litigation Deadline Pack",
+  "version": "0.1.0",
+  "scope": "matter_pack",
+  "description": "Starter Legal Office matter pack for court matter timeline, court communication history, document log, deadline control, responsible owner assignment, and filing/service review gates.",
+  "dependsOn": [
+    "legal-office-app"
+  ],
+  "optionalDependencies": [
+    "communication",
+    "ai-module",
+    "risk"
+  ],
+  "maturity": "starter",
+  "caseTypes": [
+    "litigation",
+    "court-deadline"
+  ],
+  "jurisdictions": [
+    "generic"
+  ],
+  "exports": {
+    "dependencyMetadata": "dependencies.json",
+    "workflowDefinitions": "workflows/litigation-deadline.workflow.json",
+    "documentDefinitions": "documents/litigation-deadline.documents.json",
+    "checklistRules": "checklists/litigation-deadline.checklist.json",
+    "riskTags": "risk/litigation-risk-tags.json",
+    "aiBoundaries": "ai/ai-boundaries.json",
+    "storeListing": "store/listing.json",
+    "readme": "README.md"
+  },
+  "storeMetadata": {
+    "slug": "legal-pack-litigation-deadline-control",
+    "storeTitle": "Court & Litigation Deadline Pack",
+    "storeSummary": "Litigation matter pack for deadline control, court communication history, document logs, responsible owner assignment, and filing/service review gates.",
+    "solutionScope": "legal-office",
+    "solutionTags": [
+      "solution:legal-office"
+    ],
+    "caseTypes": [
+      "litigation",
+      "court-deadline"
+    ],
+    "jurisdictions": [
+      "generic"
+    ],
+    "subscriptionRelation": "Requires Legal Office App and Documents/BPM/Calendar/CRM module access.",
+    "includedCapabilities": [
+      "court_matter_intake",
+      "court_document_registration",
+      "deadline_creation",
+      "responsible_owner_assignment",
+      "court_communication_log",
+      "filing_service_review",
+      "deadline_followup",
+      "matter_closing",
+      "litigation_deadline_documents",
+      "litigation_deadline_checklists",
+      "litigation_risk_tags",
+      "litigation_ai_boundaries"
+    ],
+    "roadmapTodo": [
+      "connect pack-specific workflow importer when Legal Matter Pack installer is available",
+      "align public solution-page card with Legal Office App dependency copy",
+      "collect smoke evidence for litigation deadline pack installation"
+    ],
+    "packageDependencies": [
+      "legal-office-app"
+    ],
+    "moduleRequirements": [
+      "documents",
+      "bpm",
+      "calendar",
+      "crm"
+    ]
+  },
+  "minimumModuleRequirements": [
+    "documents",
+    "bpm",
+    "calendar",
+    "crm"
+  ]
+}
