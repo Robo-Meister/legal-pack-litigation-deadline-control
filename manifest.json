@@ -80,5 +80,55 @@
     "bpm",
     "calendar",
     "crm"
-  ]
+  ],
+  "jurisdiction": {
+    "scope": "generic",
+    "notes": "Legacy Legal Office package metadata extended for eligibility gate support."
+  },
+  "support_level": "controlled_pilot",
+  "legal_capabilities": {
+    "enabled_workflows": [
+      "matter_intake",
+      "matter_workspace",
+      "document_request",
+      "evidence_collection",
+      "internal_task_distribution",
+      "court_communication_log",
+      "manual_deadline_queue",
+      "template_review_gate",
+      "folder_migration",
+      "risk_complexity_pricing_tags"
+    ],
+    "review_required_for": [
+      "civil_litigation",
+      "family_law",
+      "criminal_law",
+      "immigration",
+      "personal_injury",
+      "debt_collection",
+      "probate_estate",
+      "state_specific_deadlines",
+      "client_portal_external_communication"
+    ]
+  },
+  "blocked_capabilities": [
+    "live_trust_account_movement",
+    "live_efiling",
+    "live_service_of_process",
+    "autonomous_legal_advice",
+    "autonomous_deadline_finalization",
+    "client_facing_ai_legal_answers"
+  ],
+  "requires_signoff": [
+    "responsible_attorney_or_legal_ops_owner",
+    "jurisdiction_review",
+    "disclaimer_acknowledgement"
+  ],
+  "source_references": [
+    "config/robo_connector/legal_office_disclaimer_policy.v1.json",
+    "config/robo_connector/legal_office_trust_account_guardrails.v1.json",
+    "config/robo_connector/legal_office_efiling_connector_guardrails.v1.json",
+    "solution/legal-office/README.md"
+  ],
+  "review_status": "seed"
 }
